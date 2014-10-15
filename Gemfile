@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 # learn-rails
 gem 'activerecord-tableless'
 gem 'foundation-rails'
-gem 'gibbon', '~>0.4.6'
+gem 'gibbon'
 gem 'google_drive'
 gem 'binding_of_caller'
 gem 'high_voltage'
