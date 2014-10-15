@@ -31,6 +31,7 @@ gem 'activerecord-tableless'
 gem 'foundation-rails'
 gem 'gibbon', '~>0.4.6'
 gem 'google_drive'
+gem 'binding_of_caller'
 gem 'high_voltage'
 gem 'simple_form'
 group :development do
