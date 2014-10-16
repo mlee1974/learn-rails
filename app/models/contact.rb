@@ -1,3 +1,4 @@
+#
 class Contact < ActiveRecord::Base
   has_no_table
 

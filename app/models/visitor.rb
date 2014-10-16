@@ -1,14 +1,16 @@
+#
 class Visitor < ActiveRecord::Base
   has_no_table
   column :email, :string
   validates_presence_of :email
-  validates_format_of :email, :with => /\A[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}\z/i
+  validates_format_of :email,
+    :with => /\A[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}\z/i
 
   def subscribe
-    mailchimp = Gibbon::API.new("e23587df3fe3c2699037a0d5a502b0b3-us9")
+    mailchimp = Gibbon::API.new('e23587df3fe3c2699037a0d5a502b0b3-us9')
     result = mailchimp.lists.subscribe({
-      :id => "4100b9708e",
-      :email => {:email => self.email},
+      :id => '4100b9708e',
+      :email => { :email => self.email },
       :double_optin => false,
       :update_existing => true,
       :send_welcome => true

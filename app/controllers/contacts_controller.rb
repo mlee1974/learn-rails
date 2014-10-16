@@ -1,5 +1,5 @@
+#
 class ContactsController < ApplicationController
-
   def new
     @contact = Contact.new
   end
@@ -13,13 +13,12 @@ class ContactsController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
   end
-end
 
-private
+  private
 
-def secure_params
-  params.require(:contact).permit(:name, :email, :content)
-end
-
+  def secure_params
+    params.require(:contact).permit(:name, :email, :content)
+  end
 end
